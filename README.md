@@ -91,14 +91,14 @@ ecommerce_data_platform/
 
 🚀 Features
 
-✅ Batch ingestion of CSV + PostgreSQL data
-✅ Real-time ingestion of Kafka clickstream logs
-✅ ETL pipeline with PySpark (Bronze → Silver → Gold)
-✅ Aggregated business KPIs (daily sales, unique customers, product demand)
-✅ Streaming analytics for user behavior
-✅ Pluggable storage (Parquet / Delta Lake)
-✅ Ready for orchestration with Airflow / Prefect
-✅ Can scale to AWS EMR / Databricks
+* ✅ Batch ingestion of CSV + PostgreSQL data
+* ✅ Real-time ingestion of Kafka clickstream logs
+* ✅ ETL pipeline with PySpark (Bronze → Silver → Gold)
+* ✅ Aggregated business KPIs (daily sales, unique customers, product demand)
+* ✅ Streaming analytics for user behavior
+* ✅ Pluggable storage (Parquet / Delta Lake)
+* ✅ Ready for orchestration with Airflow / Prefect
+* ✅ Can scale to AWS EMR / Databricks
 
 
 🔧 Setup & Installation
@@ -125,18 +125,19 @@ docker-compose up -d
 * PostgreSQL customers table will be auto-created by docker-compose (or run SQL script manually).
 
 ▶️ Running the Pipelines
+
 🔹 Batch Processing (Transactions + Customers)
 ```bash
 python src/main_batch.py
 ```
 
-Reads raw transactions + customers
+* Reads raw transactions + customers
 
-Cleans & enriches data
+* Cleans & enriches data
 
-Saves processed data in data/silver/
+* Saves processed data in data/silver/
 
-Writes daily sales KPIs in data/gold/analytics/
+* Writes daily sales KPIs in data/gold/analytics/
 
 🔹 Streaming Processing (Clickstream from Kafka)
 
@@ -145,23 +146,18 @@ python src/main_stream.py
 
 ```
 
-Reads JSON clickstream events from Kafka
+* Reads JSON clickstream events from Kafka
 
-Processes in real-time
+* Processes in real-time
 
-Outputs to console / storage
+* Outputs to console / storage
 
 
 👨‍💻 Tech Stack
 
-Python 3.9+
-
-PySpark
-
-PostgreSQL (via JDBC)
-
-Apache Kafka
-
-Docker + docker-compose
-
-Parquet / Delta Lake
+* Python 3.9+
+* PySpark
+* PostgreSQL (via JDBC)
+* Apache Kafka
+* Docker + docker-compose
+* Parquet / Delta Lake
