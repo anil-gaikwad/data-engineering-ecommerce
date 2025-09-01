@@ -102,6 +102,7 @@ ecommerce_data_platform/
 
 
 🔧 Setup & Installation
+
 1️⃣ Clone Repository
 
 ```bash
@@ -120,9 +121,8 @@ docker-compose up -d
 ```
 4️⃣ Load Sample Data
 
-Place sample transactions.csv inside data/raw/
-
-PostgreSQL customers table will be auto-created by docker-compose (or run SQL script manually).
+* Place sample transactions.csv inside data/raw/
+* PostgreSQL customers table will be auto-created by docker-compose (or run SQL script manually).
 
 ▶️ Running the Pipelines
 🔹 Batch Processing (Transactions + Customers)
